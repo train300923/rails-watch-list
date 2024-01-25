@@ -15,6 +15,10 @@ class BookmarksController < ApplicationController
     end
   end
 
+  def destroy
+    @list = List.find(bookmark_params)
+    
+
 end
 
 private

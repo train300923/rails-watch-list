@@ -2,6 +2,6 @@
 <ul>
   <% @lists.each_with_index do |list, index| %>
   <li><%= link_to "#{list.name}", list_path(list) %>
-  <li><%= cl_image_tag "g6hzuw3vuxwi4qvamqz3", alt: "tennis player", widht: 400, height: 300, crop: :fill %>
+  <li><%= cl_image_tag list.photo.key, alt: "tennis player", width: 400, height: 300, crop: :fill %>
   <% end %>
 </ul>
