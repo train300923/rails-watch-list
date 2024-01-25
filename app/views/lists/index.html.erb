@@ -1,7 +1,7 @@
 <h1>List of movies</h1>
 <ul>
-  <% @lists.each do |list| %>
-  <li><%= list.name %></li>
+  <% @lists.each_with_index do |list, index| %>
+  <li><%= link_to "#{list.name}", list_path(list) %>
   <li><%= cl_image_tag "g6hzuw3vuxwi4qvamqz3", alt: "tennis player", widht: 400, height: 300, crop: :fill %>
   <% end %>
 </ul>
