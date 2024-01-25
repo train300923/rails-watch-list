@@ -17,12 +17,14 @@ class BookmarksController < ApplicationController
 
   def destroy
     @list = List.find(bookmark_params)
-    
 
-end
+
+
 
 private
 
 def bookmark_params
   params.require(:bookmark).permit(:comment, :movie, :list)
+end
+
 end
